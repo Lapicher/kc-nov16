@@ -5,7 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from "@angular/forms";
 
 import { AppComponent }   from './app.component';
-import { CajaComponent } from './caja.component';
+import { EjemplosBindingComponent } from "./ejemplos/ejemplos-binding.component";
+import { EjemplosComponentesComponent, CajaComponent } from "./ejemplos/ejemplos-componentes.component";
 
 // Decoramos la clase 'AppModule' con el decorador 'NgModule' para que ésta se
 // comporte como un módulo. Es necesario indicar ciertos metadatos.
@@ -24,7 +25,9 @@ import { CajaComponent } from './caja.component';
   // en el metadato 'declarations'. Si no se declara, no puede usarse.
   declarations: [
     AppComponent,
-    CajaComponent
+    CajaComponent,
+    EjemplosBindingComponent,
+    EjemplosComponentesComponent
   ],
 
   // En 'providers' establecemos los proveedores de todas las piezas de código que

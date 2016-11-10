@@ -1,6 +1,19 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
+    selector: "ejemplos-componentes",
+    templateUrl: "./app/ejemplos/ejemplos-componentes.component.html"
+})
+export class EjemplosComponentesComponent {
+
+    // Función que maneja el evento 'encima' de los componentes 'CajaComponent' que
+    // hemos pintado en el template.
+    escribeMensaje(mensaje) {
+        console.log(mensaje);
+    }
+}
+
+@Component({
     selector: "caja",
     template: `
         <div

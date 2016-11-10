@@ -1,0 +1,36 @@
+<!-- Interpolación de datos. Ponemos entre llaves {{x}} una expresión a resolver
+y Angular se encargará de hacerlo y escribir el resultado en el DOM. Cualquier
+expresión es válida, siempre que resuelva en un tipo que pueda escribirse en el DOM. -->
+<h1>Hello {{ alumnos }}!</h1>
+<h2>Y el número es: {{ numeroDeLaSuerte }}</h2>
+
+<!-- Enlace a propiedades/atributos. En HTML, el valor de los atributos de un
+elemento son siempre estáticos; no pueden establecerse de manera dinámica. Con
+Angular sí podemos, y lo hacemos indicando entre corchetes [x] el atributo en
+cuestión. De esta manera, el valor que indicamos para el atributo será una expresión
+que debe resolverse previamente a establecer el valor final. -->
+<textarea [rows]="textareaLineas"></textarea>
+
+<!-- Enlace a clases CSS. Usando el atributo 'class.x', donde x es el nombre de
+una clase CSS, podemos indicar si añadir o no dicha clase al elemento en base al
+resultado de tipo boolean de la expresión establecida. -->
+<div [class.caja]="pintamosClase"></div>
+
+<!-- Enlace a estilos. Usando el atributo 'style.x', donde x es el nombre de
+un estilo, podemos indicar su valor de manera dinámica a través de una expresión. -->
+<p [style.color]="obtenerColor()">¡Buenas noches!</p>
+
+<!-- Enlace a eventos. Para recoger eventos de un elemento, basta con indicarlo entre
+paréntesis y establecer un manejador (función) como valor. -->
+<div>
+    <button (click)="mostrarMensaje()">Mostrar Mensaje</button>
+</div>
+
+<!-- Enlace bidireccional. Con la directiva 'ngModel' enlazamos en ambos sentidos
+(vista > componente y componente > vista) un elemento HTML. Es importante tener en
+cuenta que esta directiva está en el módulo 'FormsModule', y por tanto debemos
+hacer el import correspondiente en 'AppModule' si queremos usarla. -->
+<div>
+    <input type="text" [(ngModel)]="mensaje" />
+    {{ mensaje }}
+</div>

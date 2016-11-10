@@ -1,0 +1,21 @@
+<!-- Instanciamos el componente 'CajaComponent'. Puesto que los componentes son
+reutilizables, podemos instanciarlo donde, cuando y tantas veces como queramos. Aquí
+instanciamos varios pasando distintos valores al atributo 'color'. En todos ellos
+nos subscribimos al evento de salida 'encima' asociando un manejador. Importante:
+para recoger los argumentos del evento, indicamos como parámetro del manejador '$event'. -->
+<caja
+    color="blue"
+    (encima)="escribeMensaje($event)"></caja>
+<caja
+    (encima)="escribeMensaje($event)"></caja>
+<caja
+    color="green"
+    (encima)="escribeMensaje($event)"></caja>
+<caja
+    color="yellow"
+    (encima)="escribeMensaje($event)"></caja>
+<caja
+    (encima)="escribeMensaje($event)"></caja>
+<caja
+    color="pink"
+    (encima)="escribeMensaje($event)"></caja>
