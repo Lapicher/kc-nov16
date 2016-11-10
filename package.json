@@ -1,5 +1,5 @@
 {
-  "name": "angular-quickstart",
+  "name": "agenda",
   "version": "1.0.0",
   "scripts": {
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
@@ -25,8 +25,10 @@
     "@angular/upgrade": "~2.1.1",
     "angular-in-memory-web-api": "~0.1.13",
     "core-js": "^2.4.1",
+    "font-awesome": "^4.7.0",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
+    "skeleton-css": "^2.0.4",
     "systemjs": "0.19.39",
     "zone.js": "^0.6.25"
   },
