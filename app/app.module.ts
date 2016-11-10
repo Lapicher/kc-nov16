@@ -9,6 +9,7 @@ import { EjemplosBindingComponent } from "./ejemplos/ejemplos-binding.component"
 import { EjemplosComponentesComponent, CajaComponent } from "./ejemplos/ejemplos-componentes.component";
 import { ListaContactosComponent } from "./lista-contactos/lista-contactos.component";
 import { ContactosService } from "./servicios/contactos.service";
+import { DetallesContactoComponent } from "./detalles-contacto/detalles-contacto.component";
 
 // Decoramos la clase 'AppModule' con el decorador 'NgModule' para que ésta se
 // comporte como un módulo. Es necesario indicar ciertos metadatos.
@@ -30,7 +31,8 @@ import { ContactosService } from "./servicios/contactos.service";
     CajaComponent,
     EjemplosBindingComponent,
     EjemplosComponentesComponent,
-    ListaContactosComponent
+    ListaContactosComponent,
+    DetallesContactoComponent
   ],
 
   // En 'providers' establecemos los proveedores de todas las piezas de código que

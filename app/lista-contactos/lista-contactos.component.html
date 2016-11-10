@@ -1,7 +1,9 @@
 <ul>
     <!-- Con la directiva 'ngFor' replicamos un elemento HTML tantas veces
     como items tenga una colección dada -->
-    <li *ngFor="let contacto of contactos">
+    <li
+        *ngFor="let contacto of contactos"
+        (click)="notificarContactoSeleccionado(contacto)">
         <span>{{ contacto.nombre }}</span>
     </li>
 </ul>

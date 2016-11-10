@@ -2,6 +2,8 @@ import { Injectable } from "@angular/core";
 
 import { Contacto } from "../entidades/contacto";
 
+// Con el decorador 'Injectable' marcamos una clase para que
+// se comporte como servicio.
 @Injectable()
 export class ContactosService {
 
