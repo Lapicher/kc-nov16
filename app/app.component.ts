@@ -21,7 +21,6 @@ export class AppComponent implements OnInit {
     constructor(private _contactosService: ContactosService) { }
 
     ngOnInit(): void {
-
         // Obtenemos los contactos apoyándonos en el servicio.
         this.listaContactos = this._contactosService.obtenerContactos();
     }
@@ -32,5 +31,9 @@ export class AppComponent implements OnInit {
 
     navegarRuta(ruta: string): void {
         window.open(ruta, "_blank");
+    }
+
+    guardarContacto(contacto: Contacto): void {
+        this._contactosService.guardarContacto(contacto);
     }
 }

@@ -23,7 +23,7 @@ export class Contacto {
             json.telefono,
             json.twitter,
             json.facebook,
-            json.avatar
+            json.avatar || ""
         );
     }
 
