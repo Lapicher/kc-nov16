@@ -4,9 +4,17 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from "@angular/forms";
 
-import { AppComponent }   from './app.component';
+// Imports correspondientes a los ejemplos.
 import { EjemplosBindingComponent } from "./ejemplos/ejemplos-binding.component";
 import { EjemplosComponentesComponent, CajaComponent } from "./ejemplos/ejemplos-componentes.component";
+import { EjemplosInyeccionComponent } from "./ejemplos/ejemplos-inyeccion.component";
+import { Servicio1 } from "./ejemplos/ejemplos-inyeccion-servicio1.service";
+import { Servicio2, ProveedorServicio2 } from "./ejemplos/ejemplos-inyeccion-servicio2.service";
+import { Servicio3, ProveedorServicio3 } from "./ejemplos/ejemplos-inyeccion-servicio3.service";
+import { ProveedorMiSuperValor } from "./ejemplos/ejemplos-inyeccion-value";
+
+// Imports correspondientes a la aplicación de agenda.
+import { AppComponent }   from './app.component';
 import { ListaContactosComponent } from "./lista-contactos/lista-contactos.component";
 import { ContactosService } from "./servicios/contactos.service";
 import { DetallesContactoComponent } from "./detalles-contacto/detalles-contacto.component";
@@ -32,7 +40,8 @@ import { DetallesContactoComponent } from "./detalles-contacto/detalles-contacto
     EjemplosBindingComponent,
     EjemplosComponentesComponent,
     ListaContactosComponent,
-    DetallesContactoComponent
+    DetallesContactoComponent,
+    EjemplosInyeccionComponent
   ],
 
   // En 'providers' establecemos los proveedores de todas las piezas de código que
@@ -40,7 +49,11 @@ import { DetallesContactoComponent } from "./detalles-contacto/detalles-contacto
   // y en la gran mayoría de los casos, indicaremos servicios, que es la pieza
   // inyectable más común de la plataforma.
   providers: [
-    ContactosService
+    ContactosService,
+    Servicio1,
+    ProveedorServicio2,
+    ProveedorServicio3,
+    ProveedorMiSuperValor
   ],
 
   // Aquí indicamos el componente raíz. El módulo necesita saber cuál de todos los
