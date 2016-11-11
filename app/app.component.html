@@ -20,6 +20,9 @@
         (seleccionado)="mostrarDetalles($event)"></lista-contactos>
 
     <!-- Detalles del contacto seleccionado -->
-    <detalles-contacto [contacto]="contactoSeleccionado"></detalles-contacto>
+    <detalles-contacto
+        [contacto]="contactoSeleccionado"
+        (verFacebook)="navegarRuta($event)"
+        (verTwitter)="navegarRuta($event)"></detalles-contacto>
 
 </div>

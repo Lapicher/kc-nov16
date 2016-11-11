@@ -1,8 +1,19 @@
-<div>
+<!-- Con la directiva 'ngIf' escribimos o no toda una jerarquía de elementos en el DOM
+en función de la expresión que se indica -->
+<div *ngIf="contacto">
+    <!-- Avatar -->
+    <img [src]="contacto.avatar" />
     <!-- Nombre del contacto -->
-    <h5>{{ contacto?.nombre }}</h5>
-    <!-- Correo del contacto -->
-    <span>{{ contacto?.email }}</span>
-    <!-- Teléfono -->
-    <span>{{ contacto?.telefono }}</span>
+    <h5>{{ contacto.nombre }}</h5>
+    <hr>
+    <!-- Redes Sociales -->
+    <button type="button" (click)="notificarFacebook()">
+        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+    </button>
+    <button type="button" (click)="notificarTwitter()">
+        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+    </button>
+    <hr>
+    <!-- Teléfono y Correo del contacto -->
+    <div>{{ contacto.email }} | {{ contacto.telefono }}</div>
 </div>
