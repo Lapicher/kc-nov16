@@ -13,10 +13,12 @@ export class DetallesContactoComponent {
     @Output() verFacebook: EventEmitter<string> = new EventEmitter();
     @Output() verTwitter: EventEmitter<string> = new EventEmitter();
 
+    // Notificamos la ruta del perfil Facebook del contacto.
     notificarFacebook(): void {
         this.verFacebook.emit(this.contacto.generarRutaFacebook());
     }
 
+    // Notificamos la ruta del perfil Twitter del contacto.
     notificarTwitter(): void {
         this.verTwitter.emit(this.contacto.generarRutaTwitter());
     }

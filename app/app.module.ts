@@ -1,8 +1,9 @@
 // En el documento 'app.module.ts' definimos el módulo principal de nuestra app.
 
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from "@angular/forms";
+import { HttpModule } from "@angular/http";
 
 // Imports correspondientes a los ejemplos.
 import { EjemplosBindingComponent } from "./ejemplos/ejemplos-binding.component";
@@ -30,7 +31,8 @@ import { FormularioContactoComponent } from "./formulario-contacto/formulario-co
   // usar la directiva 'ngModel', ya que forma parte de él.
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
 
   // Todas aquellos componentes, directivas y pipes de nuestra app deben declararse

@@ -2,7 +2,8 @@
   "name": "agenda",
   "version": "1.0.0",
   "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" \"npm run backend\"",
+    "backend": "json-server db.json --port 3004",
     "lite": "lite-server",
     "tsc": "tsc",
     "tsc:w": "tsc -w"
@@ -36,6 +37,7 @@
     "@types/core-js": "^0.9.34",
     "@types/node": "^6.0.45",
     "concurrently": "^3.0.0",
+    "json-server": "^0.8.23",
     "lite-server": "^2.2.2",
     "typescript": "^2.0.3"
   }

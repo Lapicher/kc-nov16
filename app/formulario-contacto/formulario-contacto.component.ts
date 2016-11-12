@@ -12,6 +12,7 @@ export class FormularioContactoComponent {
 
     @Output() formularioAceptado: EventEmitter<Contacto> = new EventEmitter();
 
+    // Notificamos el contacto obtenido a partir de los datos del formulario.
     notificarContacto(formulario: FormGroup): void {
         let contacto: Contacto = Contacto.nuevoDesdeJson(formulario.value);
         this.formularioAceptado.emit(contacto);

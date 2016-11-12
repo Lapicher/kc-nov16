@@ -1,7 +1,18 @@
+<!-- Podemos ayudarnos de la directiva 'ngForm' para obtener una referencia
+a la clase 'FormGroup' correspondiente al formulario, y asignarla en una
+variable del template. Esta variable podemos usarla para acceder a la
+validación del formulario.
+Además, usamos 'novalidate' para evitar que sea el navegador web quien
+valide el formulario, que es el comportamiento por defecto, y sea Angular
+en su lugar. -->
 <form #contactoRef="ngForm" (ngSubmit)="notificarContacto(contactoRef)" novalidate>
     <!-- Nombre -->
     <div>
         <label for="nombre">Nombre</label>
+        <!-- Para acceder a la validación del campo podemos ayudarnos de
+        la directiva 'ngModel', obteniendo una referencia a la clase
+        'FormControl' correspondiente a dicho campo y asignándola en una
+        variable del template. -->
         <input
             id="nombre"
             type="text"

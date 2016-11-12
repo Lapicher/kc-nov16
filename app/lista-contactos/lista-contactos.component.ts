@@ -12,6 +12,7 @@ export class ListaContactosComponent {
     @Input() contactos: Contacto[];
     @Output() seleccionado: EventEmitter<Contacto> = new EventEmitter();
 
+    // Notificamos la selección del usuario indicado.
     notificarContactoSeleccionado(contacto: Contacto): void {
         this.seleccionado.emit(contacto);
     }
