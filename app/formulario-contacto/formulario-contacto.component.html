@@ -7,96 +7,118 @@ valide el formulario, que es el comportamiento por defecto, y sea Angular
 en su lugar. -->
 <form #contactoRef="ngForm" (ngSubmit)="notificarContacto(contactoRef)" novalidate>
     <!-- Nombre -->
-    <div>
-        <label for="nombre">Nombre</label>
-        <!-- Para acceder a la validación del campo podemos ayudarnos de
-        la directiva 'ngModel', obteniendo una referencia a la clase
-        'FormControl' correspondiente a dicho campo y asignándola en una
-        variable del template. -->
-        <input
-            id="nombre"
-            type="text"
-            name="nombre"
-            ngModel
-            #nombreRef="ngModel"
-            placeholder="Ej. Tim"
-            required
-            minlength="3">
-        <!-- Mensajes de error. Validando el campo. A través de la template reference variable
-        tenemos acceso a la colección de posibles errores. -->
-        <div *ngIf="nombreRef.touched && nombreRef.invalid" class="mensaje-error">
-            <div *ngIf="nombreRef.errors.required">
-                El campo nombre es requerido.
-            </div>
-            <div *ngIf="nombreRef.errors.minlength">
-                El campo nombre debe tener al menos {{ nombreRef.errors.minlength.requiredLength }} caracteres.
+    <div class="row">
+        <div class="offset-by-three six columns">
+            <label for="nombre">Nombre</label>
+            <!-- Para acceder a la validación del campo podemos ayudarnos de
+            la directiva 'ngModel', obteniendo una referencia a la clase
+            'FormControl' correspondiente a dicho campo y asignándola en una
+            variable del template. -->
+            <input
+                id="nombre"
+                type="text"
+                class="u-full-width"
+                name="nombre"
+                ngModel
+                #nombreRef="ngModel"
+                placeholder="Ej. Tim"
+                required
+                minlength="3">
+            <!-- Mensajes de error. Validando el campo. A través de la template reference variable
+            tenemos acceso a la colección de posibles errores. -->
+            <div *ngIf="nombreRef.touched && nombreRef.invalid" class="mensaje-error">
+                <div *ngIf="nombreRef.errors.required">
+                    El campo nombre es requerido.
+                </div>
+                <div *ngIf="nombreRef.errors.minlength">
+                    El campo nombre debe tener al menos {{ nombreRef.errors.minlength.requiredLength }} caracteres.
+                </div>
             </div>
         </div>
     </div>
     <!-- Apellidos -->
-    <div>
-        <label for="apellidos">Apellidos</label>
-        <input
-            id="apellidos"
-            type="text"
-            name="apellidos"
-            ngModel
-            #apellidosRef="ngModel"
-            placeholder="Ej. Cook"
-            required
-            minlength="3">
-        <div *ngIf="apellidosRef.touched && apellidosRef.invalid" class="mensaje-error">
-            <div *ngIf="apellidosRef.errors.required">
-                El campo apellidos es requerido.
-            </div>
-            <div *ngIf="apellidosRef.errors.minlength">
-                El campo apellidos debe tener al menos {{ apellidosRef.errors.minlength.requiredLength }} caracteres.
+    <div class="row">
+        <div class="offset-by-three six columns">
+            <label for="apellidos">Apellidos</label>
+            <input
+                id="apellidos"
+                type="text"
+                class="u-full-width"
+                name="apellidos"
+                ngModel
+                #apellidosRef="ngModel"
+                placeholder="Ej. Cook"
+                required
+                minlength="3">
+            <div *ngIf="apellidosRef.touched && apellidosRef.invalid" class="mensaje-error">
+                <div *ngIf="apellidosRef.errors.required">
+                    El campo apellidos es requerido.
+                </div>
+                <div *ngIf="apellidosRef.errors.minlength">
+                    El campo apellidos debe tener al menos {{ apellidosRef.errors.minlength.requiredLength }} caracteres.
+                </div>
             </div>
         </div>
     </div>
     <!-- Email -->
-    <div>
-        <label for="email">Correo electrónico</label>
-        <input
-            id="email"
-            type="text"
-            name="email"
-            ngModel
-            placeholder="Ej. tim.cook@apple.com">
+    <div class="row">
+        <div class="offset-by-three six columns">
+            <label for="email">Correo electrónico</label>
+            <input
+                id="email"
+                type="text"
+                class="u-full-width"
+                name="email"
+                ngModel
+                placeholder="Ej. tim.cook@apple.com">
+        </div>
     </div>
     <!-- Teléfono -->
-    <div>
-        <label for="telefono">Teléfono</label>
-        <input
-            id="telefono"
-            type="text"
-            name="telefono"
-            ngModel
-            placeholder="Ej. 555-111222">
+    <div class="row">
+        <div class="offset-by-three six columns">
+            <label for="telefono">Teléfono</label>
+            <input
+                id="telefono"
+                type="text"
+                class="u-full-width"
+                name="telefono"
+                ngModel
+                placeholder="Ej. 555-111222">
+        </div>
     </div>
     <!-- Twitter -->
-    <div>
-        <label for="twitter">Twitter</label>
-        <input
-            id="twitter"
-            type="text"
-            name="twitter"
-            ngModel
-            placeholder="Ej. tim_cook">
+    <div class="row">
+        <div class="offset-by-three six columns">
+            <label for="twitter">Twitter</label>
+            <input
+                id="twitter"
+                type="text"
+                class="u-full-width"
+                name="twitter"
+                ngModel
+                placeholder="Ej. tim_cook">
+        </div>
     </div>
     <!-- Facebook -->
-    <div>
-        <label for="facebook">Facebook</label>
-        <input
-            id="facebook"
-            type="text"
-            name="facebook"
-            ngModel
-            placeholder="Ej. tim_cook">
+    <div class="row">
+        <div class="offset-by-three six columns">
+            <label for="facebook">Facebook</label>
+            <input
+                id="facebook"
+                type="text"
+                class="u-full-width"
+                name="facebook"
+                ngModel
+                placeholder="Ej. tim_cook">
+        </div>
     </div>
     <!-- Guardar contacto -->
-    <button
-        type="submit"
-        class="button-primary"
-        [disabled]="contactoRef.invalid">Guardar</button>
+    <div class="row">
+        <div class="offset-by-three six columns">
+            <button
+                type="submit"
+                class="button-primary u-full-width"
+                [disabled]="contactoRef.invalid">Guardar</button>
+        </div>
+    </div>
 </form>

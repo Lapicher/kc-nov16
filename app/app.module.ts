@@ -20,6 +20,9 @@ import { ListaContactosComponent } from "./lista-contactos/lista-contactos.compo
 import { ContactosService } from "./servicios/contactos.service";
 import { DetallesContactoComponent } from "./detalles-contacto/detalles-contacto.component";
 import { FormularioContactoComponent } from "./formulario-contacto/formulario-contacto.component";
+import { AppRoutingModule } from "./app-routing.module";
+import { MisContactosComponent } from "./mis-contactos/mis-contactos.component";
+import { NuevoContactoComponent } from "./nuevo-contacto/nuevo-contacto.component";
 
 // Decoramos la clase 'AppModule' con el decorador 'NgModule' para que ésta se
 // comporte como un módulo. Es necesario indicar ciertos metadatos.
@@ -32,7 +35,8 @@ import { FormularioContactoComponent } from "./formulario-contacto/formulario-co
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
 
   // Todas aquellos componentes, directivas y pipes de nuestra app deben declararse
@@ -45,7 +49,9 @@ import { FormularioContactoComponent } from "./formulario-contacto/formulario-co
     ListaContactosComponent,
     DetallesContactoComponent,
     EjemplosInyeccionComponent,
-    FormularioContactoComponent
+    FormularioContactoComponent,
+    MisContactosComponent,
+    NuevoContactoComponent
   ],
 
   // En 'providers' establecemos los proveedores de todas las piezas de código que

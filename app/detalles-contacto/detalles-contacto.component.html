@@ -1,10 +1,10 @@
 <!-- Con la directiva 'ngIf' escribimos o no toda una jerarquía de elementos en el DOM
 en función de la expresión que se indica -->
-<div *ngIf="contacto">
+<div class="u-full-width" *ngIf="contacto">
     <!-- Avatar -->
     <img [src]="contacto.avatar" />
     <!-- Nombre del contacto -->
-    <h5>{{ contacto.nombre }}</h5>
+    <h5>{{ contacto.nombre }} {{ contacto.apellidos }}</h5>
     <hr>
     <!-- Redes Sociales -->
     <button type="button" (click)="notificarFacebook()">

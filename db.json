@@ -1,3 +1,54 @@
 {
-  "contactos": []
+  "contactos": [
+    {
+      "nombre": "Tim",
+      "apellidos": "Cook",
+      "email": "",
+      "telefono": "",
+      "twitter": "",
+      "facebook": "",
+      "avatar": "",
+      "id": 1
+    },
+    {
+      "nombre": "Steve",
+      "apellidos": "Wozniak",
+      "email": "",
+      "telefono": "",
+      "twitter": "",
+      "facebook": "",
+      "avatar": "",
+      "id": 2
+    },
+    {
+      "nombre": "Steve",
+      "apellidos": "Jobs",
+      "email": "",
+      "telefono": "",
+      "twitter": "",
+      "facebook": "",
+      "avatar": "",
+      "id": 3
+    },
+    {
+      "nombre": "Sundar",
+      "apellidos": "Pichai",
+      "email": "",
+      "telefono": "",
+      "twitter": "",
+      "facebook": "",
+      "avatar": "",
+      "id": 4
+    },
+    {
+      "nombre": "Espinete",
+      "apellidos": "Grijander",
+      "email": "",
+      "telefono": "",
+      "twitter": "",
+      "facebook": "",
+      "avatar": "",
+      "id": 5
+    }
+  ]
 }

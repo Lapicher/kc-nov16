@@ -14,18 +14,21 @@
         <h1>Mi Agenda</h1>
     </header>
 
-    <!-- Formulario de alta de contactos -->
-    <formulario-contacto (formularioAceptado)="guardarContacto($event)"></formulario-contacto>
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li>
+                <a routerLink="/mis-contactos"
+                   routerLinkActive="seleccionado">Mis Contactos</a>
+            </li>
+            <li>
+                <a routerLink="/nuevo-contacto"
+                   routerLinkActive="seleccionado">Nuevo Contacto</a>
+            </li>
+        </ul>
+    </nav>
 
-    <!-- Colección de contactos -->
-    <lista-contactos
-        [contactos]="listaContactos"
-        (seleccionado)="mostrarDetalles($event)"></lista-contactos>
-
-    <!-- Detalles del contacto seleccionado -->
-    <detalles-contacto
-        [contacto]="contactoSeleccionado"
-        (verFacebook)="navegarRuta($event)"
-        (verTwitter)="navegarRuta($event)"></detalles-contacto>
+    <!-- Zona dinámica -->
+    <router-outlet></router-outlet>
 
 </div>
