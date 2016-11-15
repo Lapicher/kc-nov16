@@ -49,6 +49,26 @@
       "facebook": "",
       "avatar": "",
       "id": 5
+    },
+    {
+      "nombre": "Bob",
+      "apellidos": "Esponja",
+      "email": "",
+      "telefono": "",
+      "twitter": "",
+      "facebook": "",
+      "avatar": "",
+      "id": 6
+    },
+    {
+      "nombre": "Patricio",
+      "apellidos": "Estrella",
+      "email": "",
+      "telefono": "",
+      "twitter": "",
+      "facebook": "",
+      "avatar": "",
+      "id": 7
     }
   ]
 }

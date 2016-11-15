@@ -24,6 +24,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { MisContactosComponent } from "./mis-contactos/mis-contactos.component";
 import { NuevoContactoComponent } from "./nuevo-contacto/nuevo-contacto.component";
 import { ContactosResolve } from "./servicios/contactos-resolve.service";
+import { ProveedorDireccionServidor } from "./configuracion/rutas";
 
 // Decoramos la clase 'AppModule' con el decorador 'NgModule' para que ésta se
 // comporte como un módulo. Es necesario indicar ciertos metadatos.
@@ -65,7 +66,8 @@ import { ContactosResolve } from "./servicios/contactos-resolve.service";
     ProveedorServicio2,
     ProveedorServicio3,
     ProveedorMiSuperValor,
-    ContactosResolve
+    ContactosResolve,
+    ProveedorDireccionServidor
   ],
 
   // Aquí indicamos el componente raíz. El módulo necesita saber cuál de todos los
