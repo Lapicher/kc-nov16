@@ -70,4 +70,18 @@ export class ContactosService {
                        return Contacto.nuevoDesdeJson(json);
                    });
     }
+
+    // Obtenemos un avatar aleatorio.
+    generarRutaAvatar(): Observable<string> {
+        return this._http
+                   .get("http://faker.hook.io/?property=image.avatar")
+                   .map((respuesta: Response) => {
+                       // Obtenemos el cuerpo de la respuesta en formato texto.
+                       let rutaAvatar = respuesta.text();
+                       // Usamos expresiones regulares para limpiar la URL del avatar.
+                       rutaAvatar = rutaAvatar.replace(/\"/gi, "");
+                       rutaAvatar = rutaAvatar.replace(/\n/gi, "");
+                       return rutaAvatar;
+                   });
+    }
 }

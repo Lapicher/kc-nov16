@@ -6,6 +6,11 @@ Además, usamos 'novalidate' para evitar que sea el navegador web quien
 valide el formulario, que es el comportamiento por defecto, y sea Angular
 en su lugar. -->
 <form #contactoRef="ngForm" (ngSubmit)="notificarContacto(contactoRef)" novalidate>
+    <div class="row">
+        <div class="offset-by-three six columns avatar">
+            <img [src]="rutaAvatar">
+        </div>
+    </div>
     <!-- Nombre -->
     <div class="row">
         <div class="offset-by-three six columns">

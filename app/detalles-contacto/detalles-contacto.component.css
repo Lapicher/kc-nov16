@@ -1,6 +1,7 @@
 div {
     text-align: center;
 }
+
 button {
     padding: 0;
     margin: 0;
@@ -10,4 +11,8 @@ button {
 
 button:hover {
     color: #1eaedb;
+}
+
+img {
+    border-radius: 10px;
 }
