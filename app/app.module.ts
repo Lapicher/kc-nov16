@@ -1,9 +1,8 @@
 // En el documento 'app.module.ts' definimos el módulo principal de nuestra app.
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from "@angular/forms";
-import { HttpModule } from "@angular/http";
+import { HttpModule, JsonpModule } from "@angular/http";
 
 // Imports correspondientes a los ejemplos.
 import { EjemplosBindingComponent } from "./ejemplos/ejemplos-binding.component";
@@ -25,6 +24,8 @@ import { MisContactosComponent } from "./mis-contactos/mis-contactos.component";
 import { NuevoContactoComponent } from "./nuevo-contacto/nuevo-contacto.component";
 import { ContactosResolve } from "./servicios/contactos-resolve.service";
 import { ProveedorDireccionServidor, ProveedorDireccionFaker } from './configuracion/rutas';
+import { EjemplosObservablesComponent } from './ejemplos/ejemplos-observables.component';
+import { EjemplosObservablesWikipediaComponent } from "./ejemplos/ejemplos-observables.component";
 
 // Decoramos la clase 'AppModule' con el decorador 'NgModule' para que ésta se
 // comporte como un módulo. Es necesario indicar ciertos metadatos.
@@ -38,7 +39,8 @@ import { ProveedorDireccionServidor, ProveedorDireccionFaker } from './configura
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    JsonpModule
   ],
 
   // Todas aquellos componentes, directivas y pipes de nuestra app deben declararse
@@ -53,7 +55,9 @@ import { ProveedorDireccionServidor, ProveedorDireccionFaker } from './configura
     EjemplosInyeccionComponent,
     FormularioContactoComponent,
     MisContactosComponent,
-    NuevoContactoComponent
+    NuevoContactoComponent,
+    EjemplosObservablesComponent,
+    EjemplosObservablesWikipediaComponent
   ],
 
   // En 'providers' establecemos los proveedores de todas las piezas de código que
