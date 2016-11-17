@@ -3,82 +3,12 @@
     {
       "nombre": "Tim",
       "apellidos": "Cook",
-      "email": "",
-      "telefono": "",
-      "twitter": "",
-      "facebook": "",
-      "avatar": "",
+      "email": "tim.cook@apple.com",
+      "telefono": "555-123456",
+      "twitter": "tim_cook",
+      "facebook": "tim_cook",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/fotomagin/128.jpg",
       "id": 1
-    },
-    {
-      "nombre": "Steve",
-      "apellidos": "Wozniak",
-      "email": "",
-      "telefono": "",
-      "twitter": "",
-      "facebook": "",
-      "avatar": "",
-      "id": 2
-    },
-    {
-      "nombre": "Steve",
-      "apellidos": "Jobs",
-      "email": "",
-      "telefono": "",
-      "twitter": "",
-      "facebook": "",
-      "avatar": "",
-      "id": 3
-    },
-    {
-      "nombre": "Sundar",
-      "apellidos": "Pichai",
-      "email": "",
-      "telefono": "",
-      "twitter": "",
-      "facebook": "",
-      "avatar": "",
-      "id": 4
-    },
-    {
-      "nombre": "Espinete",
-      "apellidos": "Grijander",
-      "email": "",
-      "telefono": "",
-      "twitter": "",
-      "facebook": "",
-      "avatar": "",
-      "id": 5
-    },
-    {
-      "nombre": "Bob",
-      "apellidos": "Esponja",
-      "email": "",
-      "telefono": "",
-      "twitter": "",
-      "facebook": "",
-      "avatar": "",
-      "id": 6
-    },
-    {
-      "nombre": "Patricio",
-      "apellidos": "Estrella",
-      "email": "",
-      "telefono": "",
-      "twitter": "",
-      "facebook": "",
-      "avatar": "",
-      "id": 7
-    },
-    {
-      "nombre": "Austin",
-      "apellidos": "Powers",
-      "email": "",
-      "telefono": "",
-      "twitter": "",
-      "facebook": "",
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/aislinnkelly/128.jpg",
-      "id": 8
     }
   ]
 }

@@ -2,14 +2,14 @@ div {
     text-align: center;
 }
 
-button {
+.boton-red-social {
     padding: 0;
     margin: 0;
     border: 0;
     font-size: 32px;
 }
 
-button:hover {
+.boton-red-social:hover {
     color: #1eaedb;
 }
 

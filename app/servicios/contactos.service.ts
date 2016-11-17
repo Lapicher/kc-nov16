@@ -61,15 +61,9 @@ export class ContactosService {
     }
 
     // Eliminamos el contacto indicado del servidor.
-    eliminarContacto(contacto: Contacto): Observable<Contacto> {
+    eliminarContacto(contacto: Contacto): Observable<Response> {
         return this._http
-                   .delete(`${this._direccionServidor}/contactos/${contacto.id}`)
-                   .map((respuesta: Response) => {
-                       // Obtenemos el cuerpo de la respuesta en formato JSON.
-                       let json = respuesta.json();
-                       // Creamos una instancia de Contacto.
-                       return Contacto.nuevoDesdeJson(json);
-                   });
+                   .delete(`${this._direccionServidor}/contactos/${contacto.id}`);
     }
 
     // Obtenemos un avatar aleatorio.

@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 
 import { Contacto } from "../entidades/contacto";
+import { ContactosService } from "../servicios/contactos.service";
 
 @Component({
     templateUrl: "./app/mis-contactos/mis-contactos.component.html"
@@ -13,7 +14,9 @@ export class MisContactosComponent implements OnInit {
 
     // Necesitamos inyectar como dependencia 'ActivatedRoute' para acceder a los
     // datos contextuales de la ruta que se está navegando.
-    constructor(private _activatedRoute: ActivatedRoute) { }
+    constructor(
+        private _activatedRoute: ActivatedRoute,
+        private _contactosService: ContactosService) { }
 
     ngOnInit(): void {
 
@@ -32,5 +35,24 @@ export class MisContactosComponent implements OnInit {
     // Abrimos una pestaña del navegador con la ruta indicada.
     navegarRuta(ruta: string): void {
         window.open(ruta, "_blank");
+    }
+
+    // Avisamos al usuario de la eliminación del contacto.
+    eliminarContacto(contacto: Contacto): void {
+        // Preguntamos.
+        if (confirm(`¿Estás seguro de eliminar a ${contacto.nombre} ${contacto.apellidos}?`)) {
+            // Eliminamos el contacto.
+            this._contactosService
+                .eliminarContacto(contacto)
+                .subscribe(() => {
+                    // Filtramos la lista y nos quedamos con todos los contactos que no sean el eliminado.
+                    this.listaContactos = this.listaContactos.filter((c: Contacto) => c.id !== contacto.id);
+                    // Ocultamos el componente de detalles.
+                    this.contactoSeleccionado = null;
+                });
+        }
+        else {
+            console.log("No, déjame pensarlo.");
+        }
     }
 }
