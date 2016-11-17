@@ -28,6 +28,9 @@ import { NuevoContactoComponent } from "./nuevo-contacto/nuevo-contacto.componen
 import { ContactosResolve } from "./servicios/contactos-resolve.service";
 import { ProveedorDireccionServidor, ProveedorDireccionFaker } from './configuracion/rutas';
 import { OrdenarPipe } from './pipes/ordenar.pipe';
+import { EjemplosDirectivaAtributoDirective } from './ejemplos/ejemplos-directivas.directive';
+import { EjemplosDirectivaEstructuralDirective } from "./ejemplos/ejemplos-directiva-estructural.directive";
+import { EjemplosDirectivasComponent } from './ejemplos/ejemplos-directivas.component';
 
 // Decoramos la clase 'AppModule' con el decorador 'NgModule' para que ésta se
 // comporte como un módulo. Es necesario indicar ciertos metadatos.
@@ -61,7 +64,9 @@ import { OrdenarPipe } from './pipes/ordenar.pipe';
     EjemplosObservablesComponent,
     EjemplosObservablesWikipediaComponent,
     EjemplosPipeComponent,
-    OrdenarPipe
+    OrdenarPipe,
+    EjemplosDirectivaAtributoDirective,
+    EjemplosDirectivasComponent
   ],
 
   // En 'providers' establecemos los proveedores de todas las piezas de código que
