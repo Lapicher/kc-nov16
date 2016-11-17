@@ -12,6 +12,9 @@ import { Servicio1 } from "./ejemplos/ejemplos-inyeccion-servicio1.service";
 import { Servicio2, ProveedorServicio2 } from "./ejemplos/ejemplos-inyeccion-servicio2.service";
 import { Servicio3, ProveedorServicio3 } from "./ejemplos/ejemplos-inyeccion-servicio3.service";
 import { ProveedorMiSuperValor } from "./ejemplos/ejemplos-inyeccion-value";
+import { EjemplosObservablesComponent } from './ejemplos/ejemplos-observables.component';
+import { EjemplosObservablesWikipediaComponent } from "./ejemplos/ejemplos-observables.component";
+import { EjemplosPipeComponent } from './ejemplos/ejemplos-pipe.component';
 
 // Imports correspondientes a la aplicación de agenda.
 import { AppComponent }   from './app.component';
@@ -24,8 +27,6 @@ import { MisContactosComponent } from "./mis-contactos/mis-contactos.component";
 import { NuevoContactoComponent } from "./nuevo-contacto/nuevo-contacto.component";
 import { ContactosResolve } from "./servicios/contactos-resolve.service";
 import { ProveedorDireccionServidor, ProveedorDireccionFaker } from './configuracion/rutas';
-import { EjemplosObservablesComponent } from './ejemplos/ejemplos-observables.component';
-import { EjemplosObservablesWikipediaComponent } from "./ejemplos/ejemplos-observables.component";
 
 // Decoramos la clase 'AppModule' con el decorador 'NgModule' para que ésta se
 // comporte como un módulo. Es necesario indicar ciertos metadatos.
@@ -57,7 +58,8 @@ import { EjemplosObservablesWikipediaComponent } from "./ejemplos/ejemplos-obser
     MisContactosComponent,
     NuevoContactoComponent,
     EjemplosObservablesComponent,
-    EjemplosObservablesWikipediaComponent
+    EjemplosObservablesWikipediaComponent,
+    EjemplosPipeComponent
   ],
 
   // En 'providers' establecemos los proveedores de todas las piezas de código que
