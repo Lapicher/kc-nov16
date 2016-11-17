@@ -9,11 +9,18 @@ import { Contacto } from "../entidades/contacto";
 })
 export class ListaContactosComponent {
 
+    orden: string = "asc";
+
     @Input() contactos: Contacto[];
     @Output() seleccionado: EventEmitter<Contacto> = new EventEmitter();
 
     // Notificamos la selección del usuario indicado.
     notificarContactoSeleccionado(contacto: Contacto): void {
         this.seleccionado.emit(contacto);
+    }
+
+    // Cambiamos el sentido del orden.
+    cambiarSentidoOrden(): void {
+        this.orden = this.orden === "asc" ? "desc" : "asc";
     }
 }

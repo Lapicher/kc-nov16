@@ -27,6 +27,7 @@ import { MisContactosComponent } from "./mis-contactos/mis-contactos.component";
 import { NuevoContactoComponent } from "./nuevo-contacto/nuevo-contacto.component";
 import { ContactosResolve } from "./servicios/contactos-resolve.service";
 import { ProveedorDireccionServidor, ProveedorDireccionFaker } from './configuracion/rutas';
+import { OrdenarPipe } from './pipes/ordenar.pipe';
 
 // Decoramos la clase 'AppModule' con el decorador 'NgModule' para que ésta se
 // comporte como un módulo. Es necesario indicar ciertos metadatos.
@@ -59,7 +60,8 @@ import { ProveedorDireccionServidor, ProveedorDireccionFaker } from './configura
     NuevoContactoComponent,
     EjemplosObservablesComponent,
     EjemplosObservablesWikipediaComponent,
-    EjemplosPipeComponent
+    EjemplosPipeComponent,
+    OrdenarPipe
   ],
 
   // En 'providers' establecemos los proveedores de todas las piezas de código que
