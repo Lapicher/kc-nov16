@@ -66,7 +66,8 @@ import { EjemplosDirectivasComponent } from './ejemplos/ejemplos-directivas.comp
     EjemplosPipeComponent,
     OrdenarPipe,
     EjemplosDirectivaAtributoDirective,
-    EjemplosDirectivasComponent
+    EjemplosDirectivasComponent,
+    EjemplosDirectivaEstructuralDirective
   ],
 
   // En 'providers' establecemos los proveedores de todas las piezas de código que

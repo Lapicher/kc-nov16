@@ -19,7 +19,5 @@ export class EjemplosDirectivaEstructuralDirective {
     // en el cual está situada la directiva.
     constructor(
         private _templateRef: TemplateRef<any>,
-        private _viewContainerRef: ViewContainerRef) {
-            this._viewContainerRef.createEmbeddedView(this._templateRef);
-        }
+        private _viewContainerRef: ViewContainerRef) { }
 }
