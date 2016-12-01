@@ -1,0 +1,28 @@
+<form #contactoRef="ngForm" (ngSubmit)="guardarContacto(contactoRef)">
+    <div>
+        <label for="nombre">Nombre:</label>
+        <input 
+            id="nombre"
+            type="text"
+            name="nombre"
+            ngModel 
+            placeholder="Ej. Tim"
+            required>
+    </div>
+    <!-- Apellidos -->
+    <div>
+        <label for="apellidos">Apellidos</label>
+        <input
+            id="apellidos" 
+            type="text" 
+            ngModel
+            name="apellidos"
+            placeholder="Ej. Cook"
+            required>
+    </div>
+
+    <!-- Guardar contacto -->
+    <button type="submit">
+        Guardar
+    </button>
+</form>
