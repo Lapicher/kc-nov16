@@ -9,21 +9,36 @@ export class ContactosService {
 
     obtenerContactos(): Contacto[] {
         return [
-            {
-                nombre: "Steve Jobs",
+            Contacto.nuevoDesdeJson({
+                id: 1,
+                nombre: "Steve",
+                apellido: "Jobs",
                 email: "steve.jobs@apple.com",
-                telefono: "555123456"
-            },
-            {
-                nombre: "Bill Gates",
+                telefono: "555123456",
+                facebook: "Steave",
+                twitter: "Stve",
+                avatar : ""
+            }),
+            Contacto.nuevoDesdeJson({
+                id: 2,
+                nombre: "Bill",
+                apellido: "Gates",
                 email: "bill.gates@microsoft.com",
-                telefono: "555987654"
-            },
-            {
-                nombre: "Elon Musk",
+                telefono: "555987654",
+                facebook: "Gates",
+                twitter: "billgates",
+                avatar: ""
+            }),
+            Contacto.nuevoDesdeJson({
+                id: 3,
+                nombre: "Elon",
+                apellido: "Musk",
                 email: "elon.musk@tesla.com",
-                telefono: "555675432"
-            }
+                telefono: "555675432",
+                facebook: "elon",
+                twitter: "elon",
+                avatar: ""
+            })
         ];
     }
 }
