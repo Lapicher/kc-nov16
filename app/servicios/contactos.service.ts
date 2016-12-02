@@ -7,8 +7,8 @@ import { Contacto } from "../entidades/contacto";
 @Injectable()
 export class ContactosService {
 
-    obtenerContactos(): Contacto[] {
-        return [
+    // lista de contactos
+    private _contactos: Contacto[]= [
             Contacto.nuevoDesdeJson({
                 id: 1,
                 nombre: "Steve",
@@ -40,5 +40,20 @@ export class ContactosService {
                 avatar: ""
             })
         ];
+    // obtenemos la lista de contactos almacenados
+    obtenerContactos(): Contacto[] {
+        return this._contactos;
     }
+
+    // Guardamos el contacto indicado en la lista
+    guardarContacto(contacto: Contacto): Contacto{
+        // generamos un nuevo id y lo asignamos al nuevo contacto
+        let id = this._contactos.length + 1;
+        contacto.id = id;
+        // añadimos el contacto a la coleccion
+        this._contactos.push(contacto);
+        // se retorna el contacto actualizado con el nuevo id.
+        return contacto; 
+    }
+
 }

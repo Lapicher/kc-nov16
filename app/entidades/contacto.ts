@@ -18,12 +18,12 @@ export class Contacto {
         return new Contacto(
             json.id,
             json.nombre,
-            json.apellidos,
+            json.apellido,
             json.email,
             json.telefono,
             json.facebook,
             json.twitter,
-            json.avatar
+            json.avatar || ""
         )
     }
 

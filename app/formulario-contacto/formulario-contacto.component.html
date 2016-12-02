@@ -1,4 +1,4 @@
-<form #contactoRef="ngForm" (ngSubmit)="guardarContacto(contactoRef)">
+<form #contactoRef="ngForm" (ngSubmit)="notificarContacto(contactoRef)">
     <div>
         <label for="nombre">Nombre:</label>
         <input 
@@ -24,13 +24,13 @@
     </div>
     <!-- Apellidos -->
     <div>
-        <label for="apellidos">Apellidos</label>
+        <label for="apellido">Apellidos</label>
         <input
-            id="apellidos" 
+            id="apellido" 
             type="text" 
             ngModel
             #apellidosRf="ngModel"
-            name="apellidos"
+            name="apellido"
             placeholder="Ej. Cook"
             required
             minlength="3">
