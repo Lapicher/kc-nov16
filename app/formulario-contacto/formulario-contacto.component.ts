@@ -12,4 +12,5 @@ export class FormularioContactoComponent{
     guardarContacto(formulario: FormGroup): void{
         console.log(formulario);
     }
+    
 }

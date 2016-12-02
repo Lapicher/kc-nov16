@@ -6,8 +6,21 @@
             type="text"
             name="nombre"
             ngModel 
+            #nombreRf="ngModel"
             placeholder="Ej. Tim"
-            required>
+            required
+            minlength="3">
+            <!-- Mensajes de error. Validando el campo. Atra ves de la template reference variable tenemos accreso a la coleccion
+                 de posibles errores-->
+            <div *ngIf="nombreRf.touched && nombreRf.invalid"
+                class="mensaje-error">
+                <div *ngIf="nombreRf.errors.required">
+                    El campo nombre es requerido
+                </div>
+                <div *ngIf="nombreRf.errors.minlength">
+                    El nombre debe tener al menos {{ nombreRf.errors.minlength.requiredLength }} caracteres.
+                </div>
+            </div>
     </div>
     <!-- Apellidos -->
     <div>
@@ -16,13 +29,74 @@
             id="apellidos" 
             type="text" 
             ngModel
+            #apellidosRf="ngModel"
             name="apellidos"
             placeholder="Ej. Cook"
-            required>
+            required
+            minlength="3">
+        <!-- Mensajes de error. Validando el campo. Atra ves de la template reference variable tenemos accreso a la coleccion
+                 de posibles errores-->
+            <div *ngIf="apellidosRf.touched && apellidosRf.invalid"
+                class="mensaje-error">
+                <div *ngIf="apellidosRf.errors.required">
+                    El campo apellidos es requerido
+                </div>
+                <div *ngIf="apellidosRf.errors.minlength">
+                    El apellido debe tener al menos {{ apellidosRf.errors.minlength.requiredLength }} caracteres.
+                </div>
+            </div>
+    </div>
+    <!-- Email -->
+    <div>
+        <label for="email">Email</label>
+        <input
+            id="email" 
+            type="text" 
+            ngModel
+            name="email"
+            placeholder="Ej. tim.cook@mail.com"
+           >
+    </div>
+    <!-- Telefono -->
+    <div>
+        <label for="telefono">Telefono</label>
+        <input
+            id="telefono" 
+            type="text" 
+            ngModel
+            name="telefono"
+            placeholder="Ej. 4243423234"
+           >
+    </div>
+    <!-- Twitter -->
+    <div>
+        <label for="twitter">Twitter</label>
+        <input
+            id="twitter" 
+            type="text" 
+            ngModel
+            name="twitter"
+            placeholder="Ej. Lapicher"
+           >
+    </div>
+    <!-- Facebook -->
+    <div>
+        <label for="facebook">Facebook</label>
+        <input
+            id="facebook" 
+            type="text" 
+            ngModel
+            name="facebook"
+            placeholder="Ej. Lapicher"
+           >
     </div>
 
     <!-- Guardar contacto -->
-    <button type="submit">
+    <button 
+        type="submit" 
+        class="button-primary"
+        [disabled]="contactoRef.invalid"
+        >
         Guardar
     </button>
 </form>
