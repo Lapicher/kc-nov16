@@ -1,4 +1,7 @@
 import { Injectable } from "@angular/core";
+import { Http } from "@angular/http"; 
+import { Observable } from "rxjs/Observable";
+import "rxjs/add/operator/map"; 
 
 import { Contacto } from "../entidades/contacto";
 
@@ -7,53 +10,36 @@ import { Contacto } from "../entidades/contacto";
 @Injectable()
 export class ContactosService {
 
-    // lista de contactos
-    private _contactos: Contacto[]= [
-            Contacto.nuevoDesdeJson({
-                id: 1,
-                nombre: "Steve",
-                apellido: "Jobs",
-                email: "steve.jobs@apple.com",
-                telefono: "555123456",
-                facebook: "Steave",
-                twitter: "Stve",
-                avatar : ""
-            }),
-            Contacto.nuevoDesdeJson({
-                id: 2,
-                nombre: "Bill",
-                apellido: "Gates",
-                email: "bill.gates@microsoft.com",
-                telefono: "555987654",
-                facebook: "Gates",
-                twitter: "billgates",
-                avatar: ""
-            }),
-            Contacto.nuevoDesdeJson({
-                id: 3,
-                nombre: "Elon",
-                apellido: "Musk",
-                email: "elon.musk@tesla.com",
-                telefono: "555675432",
-                facebook: "elon",
-                twitter: "elon",
-                avatar: ""
-            })
-        ];
+
+    constructor(private _http: Http){ }
+    
     // obtenemos la lista de contactos almacenados
-    obtenerContactos(): Contacto[] {
-        return this._contactos;
+    obtenerContactos(): Observable<Contacto[]> {
+        // conectar con el servidor para obtener los contactos
+        return this._http
+                    .get("http://localhost:3004/contactos")
+                    .map((respuesta) => {
+                        //obtenemos el cuerpo de la respuesta en formato JSON.
+                        let json = respuesta.json();
+                        let contactos: Contacto[] = [];
+                        // Iteramos por los objetos del JSON y se meten a la collecion de contactos
+                        json.forEach((contacto)=>{
+                            contactos.push(Contacto.nuevoDesdeJson(contacto));
+                        });
+                        // retornamos la lista de contactos.
+                        return contactos;
+                    });
     }
 
     // Guardamos el contacto indicado en la lista
-    guardarContacto(contacto: Contacto): Contacto{
-        // generamos un nuevo id y lo asignamos al nuevo contacto
-        let id = this._contactos.length + 1;
-        contacto.id = id;
-        // añadimos el contacto a la coleccion
-        this._contactos.push(contacto);
-        // se retorna el contacto actualizado con el nuevo id.
-        return contacto; 
-    }
+    guardarContacto(contacto: Contacto): Observable<Contacto>{
+        // guardamos el contacto en el servidor.
+        return this._http
+                    .post("http://localhost:3004/contactos", contacto)
+                    .map((respuesta) => {
 
+                        let json = respuesta.json();
+                        return Contacto.nuevoDesdeJson(json)
+                    })
+    }
 }
