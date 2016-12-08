@@ -12,7 +12,7 @@ import { EjemplosInyeccionComponent } from "./ejemplos/ejemplos-inyeccion.compon
 import { Servicio1 } from "./ejemplos/ejemplos-inyeccion-servicio1.service";
 import { Servicio2, ProveedorServicio2 } from "./ejemplos/ejemplos-inyeccion-servicio2.service";
 import { Servicio3, ProveedorServicio3 } from "./ejemplos/ejemplos-inyeccion-servicio3.service";
-import { ProveedorMiSuperValor } from "./ejemplos/ejemplos-inyeccion-value";
+import { ProveedorMiSuperValor } from "./ejemplos/ejemplos-inyeccion-value"; 
 
 // Imports correspondientes a la aplicación de agenda.
 import { AppComponent }   from './app.component';
@@ -23,6 +23,7 @@ import { FormularioContactoComponent } from "./formulario-contacto/formulario-co
 import { AppRoutingModule } from "./app-routing.module";
 import { MisContactosComponent } from "./mis-contactos/mis-contactos.component";
 import { NuevoContactoComponent } from "./nuevo-contacto/nuevo-contacto.component";
+import { ContactosResolve } from "./servicios/contactos-resolve.service";
 
 // Decoramos la clase 'AppModule' con el decorador 'NgModule' para que ésta se
 // comporte como un módulo. Es necesario indicar ciertos metadatos.
@@ -63,7 +64,8 @@ import { NuevoContactoComponent } from "./nuevo-contacto/nuevo-contacto.componen
     Servicio1,
     ProveedorServicio2,
     ProveedorServicio3,
-    ProveedorMiSuperValor
+    ProveedorMiSuperValor,
+    ContactosResolve
   ],
 
   // Aquí indicamos el componente raíz. El módulo necesita saber cuál de todos los
