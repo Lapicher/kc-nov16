@@ -3,21 +3,7 @@ import { Contacto } from "../entidades/contacto";
 import { ContactosService } from "../servicios/contactos.service";
 
 @Component({
-    template: `
-        <!-- Colección de contactos -->
-        <lista-contactos
-            [contactos]="listaContactos"
-            (seleccionado)="mostrarDetalles($event)"></lista-contactos>
-
-        <!-- Detalles del contacto seleccionado -->
-        <detalles-contacto 
-            [contacto]="contactoSeleccionado"
-            (verFacebook)="navegarRuta($event)"
-            (verTwitter)="navegarRuta($event)"
-            >
-        </detalles-contacto>
-    `
-
+    templateUrl: "./app/mis-contactos/mis-contactos.component.html"  
 })
 export class MisContactosComponent implements OnInit {
     listaContactos: Contacto[];

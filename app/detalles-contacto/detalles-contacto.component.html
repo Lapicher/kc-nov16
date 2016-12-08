@@ -1,11 +1,11 @@
 <!-- directiva de ng con IF para validar al inicio cuando no se selecciona un contacto
      sino existe entonces no pinta todo el div de detalle.
 -->
-<div *ngIf="contacto">
+<div class="u-full-width" *ngIf="contacto">
 
     <img [src]="contacto.avatar" alt=""/>
     <!-- Nombre del contacto -->
-    <h5>{{ contacto.nombre }}</h5>
+    <h5>{{ contacto.nombre }} {{ contacto.apellido}}</h5>
     <hr>
     
     <button type="button" (click)="notificarFacebook()">
