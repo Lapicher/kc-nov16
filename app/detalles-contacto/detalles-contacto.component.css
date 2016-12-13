@@ -13,3 +13,6 @@ button:hover{
     color: #1eaedb;
 }
 
+img{
+    border-radius: 10px;
+}

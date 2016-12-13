@@ -42,4 +42,17 @@ export class ContactosService {
                         return Contacto.nuevoDesdeJson(json)
                     })
     }
+
+    // obtener avatar aleatorio
+    generarRutaAvatar(): Observable<string>{
+        return this._http
+                   .get("http://faker.hook.io/?property=image.avatar")
+                   .map((respuesta)=>{
+                       let rutaAvatar= respuesta.text();
+                       rutaAvatar = rutaAvatar.replace(/\"/gi,"");
+                       rutaAvatar = rutaAvatar.replace(/\n/gi,"");
+                       console.log(rutaAvatar);
+                       return rutaAvatar.toString();
+                   });
+    }
 }

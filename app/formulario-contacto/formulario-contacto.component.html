@@ -1,5 +1,10 @@
 <form #contactoRef="ngForm" (ngSubmit)="notificarContacto(contactoRef)">
     <div class="row">
+        <div class="offset-by-three six columns avatar">
+            <img [src]="rutaAvatar">
+        </div>
+    </div>
+    <div class="row">
         <div class="offset-by-three six columns">
             <label for="nombre">Nombre:</label>
             <input 
