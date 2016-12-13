@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import { Router } from "@angular/router";
 import { Contacto } from "../entidades/contacto";
 import { ContactosService } from "../servicios/contactos.service";
 
@@ -14,13 +15,14 @@ export class NuevoContactoComponent{
     // Usando el modificador de acceso en un parámetro del constructor, hacemos
     // que TypeScript lo añada como atributo a la instancia que se crea. Así es
     // como hacemos la inyección de dependencias en Angular.
-    constructor(private _contactosService: ContactosService) { }
+    constructor(private _contactosService: ContactosService,
+                private _router: Router) { }
 
 
      guardarContacto(contacto: Contacto): void{
         console.log(contacto);
         this._contactosService.guardarContacto(contacto)
-                              .subscribe(contacto => { alert("Contacto Creado")})
+                              .subscribe(contacto => { this._router.navigate(["/mis-contactos"])})
     }
 
 }
